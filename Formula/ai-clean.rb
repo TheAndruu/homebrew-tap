@@ -5,21 +5,21 @@
 class AiClean < Formula
   desc "Clean clipboard text from AI CLI tools"
   homepage "https://github.com/TheAndruu/ai-clean"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.6/ai-clean_darwin_amd64.tar.gz"
-      sha256 "10893f98ddb631b03cb5d6b9a14d064505bb34b9dc5b248d9db0616d6efeba1a"
+      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.7/ai-clean_darwin_amd64.tar.gz"
+      sha256 "5bfa96b5529ac130523e682f6003c564a5fb6d1d8795148ca4fc0ce8dbb49439"
 
       define_method(:install) do
         bin.install "ai-clean"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.6/ai-clean_darwin_arm64.tar.gz"
-      sha256 "b07faac787603f8f902efad0369b1d6d88e4db11fa39fb3d298f8db5c915ec35"
+      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.7/ai-clean_darwin_arm64.tar.gz"
+      sha256 "5955eb1f5399acb9271a4bbc102e769af5c4b1a7197811b7467ac4b5e2dff863"
 
       define_method(:install) do
         bin.install "ai-clean"
@@ -29,15 +29,15 @@ class AiClean < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.6/ai-clean_linux_amd64.tar.gz"
-      sha256 "10520a1c18c1e5b10c650df6c3bed38527628d901482d8dbe4f4d82512c08efa"
+      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.7/ai-clean_linux_amd64.tar.gz"
+      sha256 "34f135a1b546f1f44ad8a65e818a1ecb6287213093a13efd7045883b8c82a387"
       define_method(:install) do
         bin.install "ai-clean"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.6/ai-clean_linux_arm64.tar.gz"
-      sha256 "d878e11977ffebfa7891d7f9cddc16a5ad8a0c244bac9d0348e6a9010fa3b68c"
+      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.7/ai-clean_linux_arm64.tar.gz"
+      sha256 "b71175c8f4a307fc4993a7761d833667826174e9d31e7e07827f19d35a2897df"
       define_method(:install) do
         bin.install "ai-clean"
       end
