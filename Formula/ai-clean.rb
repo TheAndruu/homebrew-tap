@@ -5,41 +5,53 @@
 class AiClean < Formula
   desc "Clean clipboard text from AI CLI tools"
   homepage "https://github.com/TheAndruu/ai-clean"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.7/ai-clean_darwin_amd64.tar.gz"
-      sha256 "5bfa96b5529ac130523e682f6003c564a5fb6d1d8795148ca4fc0ce8dbb49439"
+      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.8/ai-clean_darwin_amd64.tar.gz"
+      sha256 "4b1033aedc3ee4a76f8cb5ab7ad9d74f9eeafb8ca982ee6bcfb05de70bbb80be"
 
       define_method(:install) do
         bin.install "ai-clean"
+        bash_completion.install "completions/ai-clean.bash" => "ai-clean"
+        zsh_completion.install "completions/ai-clean.zsh" => "_ai-clean"
+        fish_completion.install "completions/ai-clean.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.7/ai-clean_darwin_arm64.tar.gz"
-      sha256 "5955eb1f5399acb9271a4bbc102e769af5c4b1a7197811b7467ac4b5e2dff863"
+      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.8/ai-clean_darwin_arm64.tar.gz"
+      sha256 "f19551be6c595a8f0afa46ad4050066ecd045fba990d5933bd6b225b47b5005f"
 
       define_method(:install) do
         bin.install "ai-clean"
+        bash_completion.install "completions/ai-clean.bash" => "ai-clean"
+        zsh_completion.install "completions/ai-clean.zsh" => "_ai-clean"
+        fish_completion.install "completions/ai-clean.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.7/ai-clean_linux_amd64.tar.gz"
-      sha256 "34f135a1b546f1f44ad8a65e818a1ecb6287213093a13efd7045883b8c82a387"
+      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.8/ai-clean_linux_amd64.tar.gz"
+      sha256 "ced1fd505597326fde0a771ea2db360417c2be479afd519314921ef076fb170f"
       define_method(:install) do
         bin.install "ai-clean"
+        bash_completion.install "completions/ai-clean.bash" => "ai-clean"
+        zsh_completion.install "completions/ai-clean.zsh" => "_ai-clean"
+        fish_completion.install "completions/ai-clean.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.7/ai-clean_linux_arm64.tar.gz"
-      sha256 "b71175c8f4a307fc4993a7761d833667826174e9d31e7e07827f19d35a2897df"
+      url "https://github.com/TheAndruu/ai-clean/releases/download/v0.1.8/ai-clean_linux_arm64.tar.gz"
+      sha256 "ff5bd32d84d7e412a62b53d10465ac2e466042be1b10cc54775086259baef936"
       define_method(:install) do
         bin.install "ai-clean"
+        bash_completion.install "completions/ai-clean.bash" => "ai-clean"
+        zsh_completion.install "completions/ai-clean.zsh" => "_ai-clean"
+        fish_completion.install "completions/ai-clean.fish"
       end
     end
   end
